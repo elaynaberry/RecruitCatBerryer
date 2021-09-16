@@ -6,7 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Pages\Models\Class.cs" />
+    <Compile Remove="Models\Class.cs" />
   </ItemGroup>
 
   <ItemGroup>

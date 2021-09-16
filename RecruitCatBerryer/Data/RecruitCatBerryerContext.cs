@@ -15,5 +15,11 @@ namespace RecruitCatBerryer.Data
         }
 
         public DbSet<RecruitCatBerryer.Pages.NewFolder.Candidate> Candidate { get; set; }
+
+        public DbSet<RecruitCatBerryer.Pages.NewFolder.Company> Company { get; set; }
+
+        public DbSet<RecruitCatBerryer.Pages.NewFolder.Industry> Industry { get; set; }
+
+        public DbSet<RecruitCatBerryer.Pages.NewFolder.JobTitle> JobTitle { get; set; }
     }
 }
