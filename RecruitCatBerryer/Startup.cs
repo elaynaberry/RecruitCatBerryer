@@ -10,6 +10,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using RecruitCatBerryer.Data;
+using Gtt.Uc.EntityFramework;
 
 namespace RecruitCatBerryer
 {
@@ -27,8 +28,9 @@ namespace RecruitCatBerryer
         {
             services.AddRazorPages();
 
-            services.AddDbContext<RecruitCatBerryerContext>(options =>
-                    options.UseSqlServer(Configuration.GetConnectionString("RecruitCatBerryerContext")));
+            //services.AddDbContext<RecruitCatBerryerContext>(options =>
+           //         options.UseSqlServer(Configuration.GetConnectionString("RecruitCatBerryerContext")));
+            services.AddGttMem<RecruitCatBerryerContext>("0608e9f9 - 1c5a - 418e-94ab - 35ce571d6101");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
