@@ -37,7 +37,7 @@ namespace RecruitCatBerryer.Pages.Companies
             {
                 return NotFound();
             }
-           ViewData["IndustryId"] = new SelectList(_context.Set<Industry>(), "Id", "Id");
+           ViewData["IndustryId"] = new SelectList(_context.Set<Industry>(), "Id", "IndustryId");
             return Page();
         }
 
