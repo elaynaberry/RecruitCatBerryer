@@ -29,7 +29,9 @@ namespace RecruitCatBerryer.Pages.Companies
             }
 
             Company = await _context.Company
-                .Include(c => c.Industry).FirstOrDefaultAsync(m => m.Id == id);
+                .Include(c => c.Candidates)
+                .Include(c => c.Industry)
+                .FirstOrDefaultAsync(m => m.Id == id);
 
             if (Company == null)
             {
@@ -37,5 +39,6 @@ namespace RecruitCatBerryer.Pages.Companies
             }
             return Page();
         }
+
     }
 }

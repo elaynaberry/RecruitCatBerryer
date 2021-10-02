@@ -35,7 +35,6 @@ namespace RecruitCatBerryer.Pages.NewFolder
         [DataType(DataType.DateTime)]
         [Required]
         public DateTime StartDate { get; set; }
-        [Required]
         public string Location { get; set; }
         [Display(Name = "Company Size")]
         [DataType(DataType.Text)]
