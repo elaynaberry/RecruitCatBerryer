@@ -70,9 +70,9 @@
 @if (Model.Company.Candidates.Any())
 {
     <div>
-    <table class="table table-bordered">
-        <thead>
-            <tr>
+        <table class="table table-bordered">
+             <thead>
+              <tr>
                 <th>
                     @Html.DisplayNameFor(model => model.Company.Candidates[0].JobTitle)
                 </th>
@@ -135,7 +135,7 @@
                         @Html.DisplayFor(modelItem => item.StateOfResidency)
                     </td>
                     <td>
-                        <a asp-page="/Company/Details" asp-route-id="@item.CompanyId">Details</a>
+                        <a asp-page="/Candidates/Details" asp-route-id="@item.CompanyId">Details</a>
                     </td>
                 </tr>
             }
@@ -143,6 +143,11 @@
     </table>
         </div>
 }
+else
+            {
+                <div class="alert alert-warning">No Candidates Exist for this company.</div>
+            }
+
 <div>
     <a asp-page="./Edit" asp-route-id="@Model.Company.Id">Edit</a> |
     <a asp-page="./Index">Back to List</a>
